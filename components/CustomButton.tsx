@@ -18,7 +18,6 @@ import {useNavigation} from '@react-navigation/native';
 import {OnboardingData} from './OnboardingScreen';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../../../navigator/RootNavigator';
-import Home from './AppPages/Home.tsx';
 import OnboardingScreen from './OnboardingScreen';
 import Welcome from './Welcome/Welcome.tsx';
 type Props = {

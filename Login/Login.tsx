@@ -1,288 +1,256 @@
-// LoginP.tsx
-import DHome from'./DocApp/DHome.tsx';
-import React,{ useState, useRef, useEffect } from "react";
-import {  View, Text, Pressable, Image,TouchableOpacity, Modal,TextInput,StyleSheet} from "react-native";
-import Button from "../Welcome/Buttons.tsx";
-import * as Animatable from 'react-native-animatable';
-import { useNavigation } from '@react-navigation/native';
-import Checkbox from "expo-checkbox"
+                             import { View, Text, Image, Pressable, TextInput, TouchableOpacity } from 'react-native'
+                             import React, { useState } from 'react'
+                             import { SafeAreaView } from "react-native-safe-area-context";
+                             import { Ionicons } from "@expo/vector-icons";
+                             import Checkbox from "expo-checkbox"
+                             import Button from '../Welcome/Buttons.tsx';
+                             import LinearGradient from 'react-native-linear-gradient';
+                             import Welcome from './Welcome/Welcome.tsx';
+                             import Signup from '../Login/Signup.tsx';
+                             import Home from '../PAGES/Home.tsx';
 
-const Login = ({ modalRef }) => {
-  const navigation = useNavigation();
-  const [isPasswordShown, setIsPasswordShown] = useState(false);
-   const [isChecked, setIsChecked] = useState(false);
-const closeModal = () => {
-      modalRef.current.fadeOut(); // Trigger the fadeOut animation when closing the modal
-      setTimeout(() => {
-        setModalVisible(false);
-      }, 300); // Adjust the delay to match the duration of the fadeOut animation
-    };
+                             const SignupP = ({ navigation }) => {
+                                 const [isPasswordShown, setIsPasswordShown] = useState(false);
+                                 const [isChecked, setIsChecked] = useState(false);
+                                 return (
+                                     <LinearGradient
+                                                         style={{
+                                                             flex: 1
+                                                         }}
+                                                         colors={['#E4D5C7', '#247158']}
+                                                     >
+                                         <View style={{ flex: 1, marginHorizontal: 22 }}>
+                                             <View style={{ marginVertical: 22 }}>
+                                                 <Text style={{
+                                                     fontSize: 22,
+                                                     fontWeight: 'bold',
+                                                     marginVertical: 12,
+                                                     color: "black",
+                                                 }}>
+                                                     Login
+                                                 </Text>
 
-  return (
-    <View>
-      <TouchableOpacity style={styles.closeButtonContainer} onPress={closeModal}>
-        <Text style={{ color: "black", fontSize: 20 }}>X</Text>
-      </TouchableOpacity>
+                                                 <Text style={{
+                                                     fontSize: 16,
+                                                     color: "black",
+                                                 }}>Connect with your friend today!</Text>
+                                             </View>
 
-      {/* Your modal content */}
-      <View style={styles.formInputContainer}>
-      <View style={{ marginVertical: 10 }}>
-                          <Text style={{
-                              fontSize: 22,
-                              fontWeight: 'bold',
-                              marginVertical: 5,
-                              color: "black",
-                          }}>
-                              Hi Welcome Back ! 👋
-                          </Text>
+                                             <View style={{ marginBottom: 12 ,color: "black",}}>
+                                                 <Text style={{
+                                                     fontSize: 16,
+                                                     fontWeight: 400,
+                                                     marginVertical: 8,
+                                                     color:"black"
+                                                 }}>Email address</Text>
 
-                          <Text style={{
-                              fontSize: 16,
-                              color: "black",
-                          }}>Hello again you have been missed!</Text>
-                      </View>
-        <View style={{ marginBottom: 10 }}>
-                            <Text style={{
-                                fontSize: 16,
-                                fontWeight: 400,
-                                marginVertical: 8,
-                                color:"green",
-                            }}>Email address</Text>
+                                                 <View style={{
+                                                     width: "100%",
+                                                     height: 48,
+                                                     borderColor:  "black",
+                                                     borderWidth: 1,
+                                                     borderRadius: 8,
+                                                     alignItems: "center",
+                                                     justifyContent: "center",
+                                                     paddingLeft: 22
+                                                 }}>
+                                                     <TextInput
+                                                         placeholder='Enter your email address'
+                                                         placeholderTextColor={ "black"}
+                                                         keyboardType='email-address'
+                                                         style={{
+                                                             width: "100%"
+                                                         }}
+                                                     />
+                                                 </View>
+                                             </View>
 
-                            <View style={{
-                                width: "100%",
-                                height: 48,
-                                borderColor: "black",
-                                borderWidth: 1,
-                                borderRadius: 8,
-                                alignItems: "center",
-                                justifyContent: "center",
-                                paddingLeft: 22
-                            }}>
-                                <TextInput
-                                    placeholder='Enter your email address'
-                                    placeholderTextColor={"black"}
-                                    keyboardType='email-address'
-                                    style={{
-                                        width: "100%",
-                                        color:"black"
-                                    }}
-                                />
-                            </View>
-                        </View>
-         <View style={{ marginBottom: 12 }}>
-                            <Text style={{
-                                fontSize: 16,
-                                fontWeight: 400,
-                                marginVertical: 8,
-                                color:"black",
-                            }}>Password</Text>
+                                             <View style={{ marginBottom: 12 }}>
+                                                 <Text style={{
+                                                     fontSize: 16,
+                                                     fontWeight: 400,
+                                                     marginVertical: 8,
+                                                     color: "black",
+                                                 }}>Password</Text>
 
-                            <View style={{
-                                width: "100%",
-                                height: 48,
-                                borderColor: "black",
-                                borderWidth: 1,
-                                borderRadius: 8,
-                                alignItems: "center",
-                                justifyContent: "center",
-                                paddingLeft: 22
-                            }}>
-                                <TextInput
-                                    placeholder='Enter your password'
-                                    placeholderTextColor={"black"}
-                                    secureTextEntry={isPasswordShown}
-                                    style={{
-                                        width: "100%",
-                                        color:"black",
-                                    }}
-                                />
+                                                 <View style={{
+                                                     width: "100%",
+                                                     height: 48,
+                                                     borderColor:  "black",
+                                                     borderWidth: 1,
+                                                     borderRadius: 8,
+                                                     alignItems: "center",
+                                                     justifyContent: "center",
+                                                     paddingLeft: 22
+                                                 }}>
+                                                     <TextInput
+                                                         placeholder='Enter your password'
+                                                         placeholderTextColor= "black"
+                                                         secureTextEntry={isPasswordShown}
+                                                         style={{
+                                                             width: "100%"
+                                                         }}
+                                                     />
 
-                                <TouchableOpacity
-                                    onPress={() => setIsPasswordShown(!isPasswordShown)}
-                                    style={{
-                                        position: "absolute",
-                                        right: 12,
-                                        color:"black",
-                                    }}
-                                >
-                                    {
-                                        isPasswordShown == true ? (
-                                            <Image
-                                                                source={require('../assets/R-eye.png')} // Update with the path to your eye-off image
-                                                                style={{
-                                                                    height: 24,
-                                                                    width: 24,
-                                                                    tintColor: "black",
-                                                                }}
-                                                            />
-                                        ) : (
-                                            <Image
-                                                                source={require('../assets/Leye.png')} // Update with the path to your eye-off image
-                                                                style={{
-                                                                    height: 24,
-                                                                    width: 24,
-                                                                    tintColor: "black",
-                                                                }}
-                                                            />
-                                        )
-                                    }
+                                                     <TouchableOpacity
+                                                         onPress={() => setIsPasswordShown(!isPasswordShown)}
+                                                         style={{
+                                                             position: "absolute",
+                                                             right: 12
+                                                         }}
+                                                     >
+                                                        {
+                                                                                                isPasswordShown == true ? (
+                                                                                                    <Image
+                                                                                                                        source={require('../assets/R-eye.png')} // Update with the path to your eye-off image
+                                                                                                                        style={{
+                                                                                                                            height: 24,
+                                                                                                                            width: 24,
+                                                                                                                            tintColor: "black",
+                                                                                                                        }}
+                                                                                                                    />
+                                                                                                ) : (
+                                                                                                    <Image
+                                                                                                                        source={require('../assets/Leye.png')} // Update with the path to your eye-off image
+                                                                                                                        style={{
+                                                                                                                            height: 24,
+                                                                                                                            width: 24,
+                                                                                                                            tintColor: "black",
+                                                                                                                        }}
+                                                                                                                    />
+                                                                                                )
+                                                                                            }
 
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-        <View style={{
-                            flexDirection: 'row',
-                            marginVertical: 6,
-                            paddingLeft:10,
-                        }}>
-                            <Checkbox
-                                style={{ marginRight: 20 }}
-                                value={isChecked}
-                                onValueChange={setIsChecked}
-                                color={isChecked ? 'green' : undefined }
 
-                            />
+                                                     </TouchableOpacity>
+                                                 </View>
+                                             </View>
 
-                            <Text style={{color:"black"}}>Remember Me</Text>
-                        </View>
-        <Button
-                            title="Login"
-                            filled
-                            onPress={() => navigation.navigate("DHome")}
-                            style={{
-                                marginTop: 15,
-                                marginBottom: 2,
-                            }}
-                        />
+                                             <View style={{
+                                                 flexDirection: 'row',
+                                                 marginVertical: 6
+                                             }}>
+                                                 <Checkbox
+                                                     style={{ marginRight: 8 }}
+                                                     value={isChecked}
+                                                     onValueChange={setIsChecked}
+                                                     color={isChecked ? "green" : undefined}
+                                                 />
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 15 }}>
-          <View
-                                  style={{
-                                      flex: 1,
-                                      height: 1,
-                                      backgroundColor: "grey",
-                                      marginHorizontal: 10
-                                  }}
-                              />
-                              <Text style={{ fontSize: 14,color:"black" }}>Or Login with</Text>
-                              <View
-                                  style={{
-                                      flex: 1,
-                                      height: 1,
-                                      backgroundColor: "grey",
-                                      marginHorizontal: 10
-                                  }}
-                              />
-                          </View>
-        <View style={{
-          flexDirection: 'row',
-          justifyContent: 'center'
-        }}>
-          <TouchableOpacity
-            onPress={() => console.log("Pressed")}
-            style={{
-              flex: 1,
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: 'row',
-              height: 52,
-              borderWidth: 1,
-              borderColor: "grey",
-              marginRight: 4,
-              borderRadius: 10
-            }}
-          >
-            <Image
-              source={require("../assets/Phone3.png")}
-              style={{
-                height: 36,
-                width: 36,
-                marginRight: 8
-              }}
-              resizeMode='contain'
-            />
+                                                 <Text style={{color: "black",}}>I aggree to the terms and conditions</Text>
+                                             </View>
 
-            <Text style={{ color: "black" }}>Facebook</Text>
-          </TouchableOpacity>
+                                             <Button
+                                                 onPress={()=>navigation.navigate("Home")}
+                                                 title="Login"
+                                                 filled
+                                                 style={{
+                                                     marginTop: 18,
+                                                     marginBottom: 4,
+                                                 }}
+                                             />
 
-          <TouchableOpacity
-            onPress={() => console.log("Pressed")}
-            style={{
-              flex: 1,
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: 'row',
-              height: 52,
-              borderWidth: 1,
-              borderColor: "grey",
-              marginRight: 4,
-              borderRadius: 10
-            }}
-          >
-            <Image
-              source={require("../assets/google.png")}
-              style={{
-                height: 36,
-                width: 36,
-                marginRight: 8
-              }}
-              resizeMode='contain'
-            />
+                                             <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 20 }}>
+                                                 <View
+                                                     style={{
+                                                         flex: 1,
+                                                         height: 1,
+                                                         backgroundColor:" grey",
+                                                         marginHorizontal: 10
+                                                     }}
+                                                 />
+                                                 <Text style={{ fontSize: 14 }}>Or Login with</Text>
+                                                 <View
+                                                     style={{
+                                                         flex: 1,
+                                                         height: 1,
+                                                          backgroundColor:" grey",
+                                                         marginHorizontal: 10
+                                                     }}
+                                                 />
+                                             </View>
 
-            <Text style={{ color: "black" }}>Google</Text>
-          </TouchableOpacity>
-        </View>
- <View style={{
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    marginVertical: 22
-                }}>
-                    <Text style={{ fontSize: 16, color: "black" }}>Don't have an account ? </Text>
-                    <Pressable
-                        onPress={() => navigation.navigate("Signup")}
-                    >
-                        <Text style={{
-                            fontSize: 16,
-                            color: "purple",
-                            fontWeight: "bold",
-                            marginLeft: 6
-                        }}>Register</Text>
-                    </Pressable>
-                </View>
+                                             <View style={{
+                                                 flexDirection: 'row',
+                                                 justifyContent: 'center'
+                                             }}>
+                                                 <TouchableOpacity
+                                                     onPress={() => console.log("Pressed")}
+                                                     style={{
+                                                         flex: 1,
+                                                         alignItems: 'center',
+                                                         justifyContent: 'center',
+                                                         flexDirection: 'row',
+                                                         height: 52,
+                                                         borderWidth: 1,
+                                                          backgroundColor:" grey",
+                                                         marginRight: 4,
+                                                         borderRadius: 10
+                                                     }}
+                                                 >
+                                                     <Image
+                                                         source={require("../assets/google.png")}
+                                                         style={{
+                                                             height: 36,
+                                                             width: 36,
+                                                             marginRight: 8
+                                                         }}
+                                                         resizeMode='contain'
+                                                     />
 
-      </View>
-    </View>
-  );
-};
+                                                     <Text>Facebook</Text>
+                                                 </TouchableOpacity>
 
-export default Login;
-const styles = StyleSheet.create({
+                                                 <TouchableOpacity
+                                                     onPress={() => console.log("Pressed")}
+                                                     style={{
+                                                         flex: 1,
+                                                         alignItems: 'center',
+                                                         justifyContent: 'center',
+                                                         flexDirection: 'row',
+                                                         height: 52,
+                                                         borderWidth: 1,
+                                                         borderColor: "black",
+                                                         marginRight: 4,
+                                                         borderRadius: 10
+                                                     }}
+                                                 >
+                                                     <Image
+                                                         source={require("../assets/google.png")}
+                                                         style={{
+                                                             height: 36,
+                                                             width: 36,
+                                                             marginRight: 8
+                                                         }}
+                                                         resizeMode='contain'
+                                                     />
 
- textInput:{
-    height:50,
-    borderWidth:2,
-    borderColor:'rgba(0,0,0,0.2)',
-    marginVertical:10,
-    marginHorizontal:0,
-    borderRadius:25,
-    paddingLeft:10,
-    backgroundColor:"grey",
- },
- formInputContainer:{
-        marginBottom:10,
- },
- closeButtonContainer:{
-        height:40,
-        width:40,
-        top:10,
-        justifyContent:'center',
-        position: "absolute",
-        alignSelf:'center',
-        alignItems:'center',
-        borderRadius:20,
-        backgroundColor:"white",
-        marginTop: -60,
-   },
+                                                     <Text style={{color:"black"}}>Google</Text>
+                                                 </TouchableOpacity>
+                                             </View>
 
-});
+                                             <View style={{
+                                                 flexDirection: "row",
+                                                 justifyContent: "center",
+                                                 marginVertical: 22
+                                             }}>
+                                                 <Text style={{ fontSize: 16, color: "black" }}>Make a new account </Text>
+                                                 <Pressable
+                                                     onPress={() => navigation.navigate("Signup")}
+                                                 >
+                                                     <Text style={{
+                                                         fontSize: 16,
+                                                         color:"purple",
+                                                         fontWeight: "bold",
+                                                         marginLeft: 6
+                                                     }}>Sign Up</Text>
+                                                 </Pressable>
+                                             </View>
+                                         </View>
+                                     </LinearGradient>
+                                 )
+                             }
+
+                             export default SignupP
+
+

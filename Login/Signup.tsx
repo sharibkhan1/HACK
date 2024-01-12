@@ -7,6 +7,9 @@ import Button from '../Welcome/Buttons.tsx';
 import Welcome from './Welcome/Welcome.tsx';
 import LinearGradient from 'react-native-linear-gradient';
 import LottieView from 'lottie-react-native';
+import Login from '../Login/Login.tsx';
+import Home from '../PAGES/Home.tsx';
+
 const Signup = ({ navigation }) => {
     const [isPasswordShown, setIsPasswordShown] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
@@ -192,6 +195,7 @@ const Signup = ({ navigation }) => {
                 </View>
 
                 <Button
+                    onPress={()=>navigation.navigate("Welcome")}
                     title="Sign Up"
                     filled
                     style={{
@@ -286,9 +290,8 @@ const Signup = ({ navigation }) => {
                 }}>
                     <Text style={{ fontSize: 16, color: "black" }}>Already have an account</Text>
                     <Pressable
-                         onPress={() => navigation.navigate("Welcome", { modalType: 'doctor', showModal: true })}
+                         onPress={() => navigation.navigate("Login")}
                         >
-
                         <Text style={{
                             fontSize: 16,
                             color:"purple",

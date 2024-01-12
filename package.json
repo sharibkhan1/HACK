@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@expo/image-utils": "^0.3.9",
+    "@react-native-async-storage/async-storage": "^1.22.2",
     "@react-native-community/viewpager": "^5.0.11",
     "@react-navigation/bottom-tabs": "^6.5.11",
     "@react-navigation/material-bottom-tabs": "^6.2.19",
