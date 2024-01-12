@@ -53,7 +53,7 @@ const closeModal = () => {
         >
           {isPasswordShown == true ? (
             <Image
-              source={require('../assets/48980-200.png')}
+              source={require('../assets/R-eye.png')}
               style={{
                 height: 30,
                 width: 30,
@@ -62,7 +62,7 @@ const closeModal = () => {
             />
           ) : (
             <Image
-              source={require('../assets/1339644-200-removebg-preview.png')}
+              source={require('../assets/Leye.png')}
               style={{
                 height: 30,
                 width: 30,
@@ -124,7 +124,7 @@ const closeModal = () => {
             }}
           >
             <Image
-              source={require("../assets/1144293.jpg")}
+              source={require("../assets/google.png")}
               style={{
                 height: 36,
                 width: 36,
@@ -151,7 +151,7 @@ const closeModal = () => {
             }}
           >
             <Image
-              source={require("../assets/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13-removebg-preview.png")}
+              source={require("../assets/google.png")}
               style={{
                 height: 36,
                 width: 36,

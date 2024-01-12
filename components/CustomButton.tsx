@@ -100,7 +100,7 @@ const CustomButton = ({flatListRef, flatListIndex, dataLength, x}: Props) => {
           Get Started
         </Animated.Text>
         <Animated.Image
-          source={require('../assets/59209.png')}
+          source={require('../assets/arrow.png')}
           style={[styles.arrow, arrowAnimationStyle]}
         />
       </Animated.View>

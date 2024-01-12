@@ -1,17 +1,23 @@
 import React from 'react';
-import { View, Text, Button ,StyleSheet} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import OnboardingScreen from './AppPages/OnboardingScreen.tsx';
-import Welcome from './Welcome/Welcome.tsx';
-import NavBar from '../NavBar/NavBar.tsx';
+import { View, Text } from 'react-native';
 
-const PHome: React.FC = () => {
+// Assuming you have a global Colors object or define it here
+
+const PHome = () => {
+const Colors = {
+  primary: 'brown',
+  primaryLite: 'red',
+};
+
   return (
-    <View>
-
+    <View style={{
+      justifyContent: "center",
+      alignContent: "center",
+      flex: 1,
+      backgroundColor: Colors.primary, // Use primary color as the background
+    }}>
       <View>
-        {/* Your screen content goes here */}
-        <Text style={{color:"black"}}>PHome</Text>
+        <Text style={{ color: "black" }}>P3</Text>
       </View>
     </View>
   );

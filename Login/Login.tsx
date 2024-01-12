@@ -109,7 +109,7 @@ const closeModal = () => {
                                     {
                                         isPasswordShown == true ? (
                                             <Image
-                                                                source={require('../assets/48980-200.png')} // Update with the path to your eye-off image
+                                                                source={require('../assets/R-eye.png')} // Update with the path to your eye-off image
                                                                 style={{
                                                                     height: 24,
                                                                     width: 24,
@@ -118,7 +118,7 @@ const closeModal = () => {
                                                             />
                                         ) : (
                                             <Image
-                                                                source={require('../assets/1339644-200-removebg-preview.png')} // Update with the path to your eye-off image
+                                                                source={require('../assets/Leye.png')} // Update with the path to your eye-off image
                                                                 style={{
                                                                     height: 24,
                                                                     width: 24,
@@ -194,7 +194,7 @@ const closeModal = () => {
             }}
           >
             <Image
-              source={require("../assets/1144293.jpg")}
+              source={require("../assets/Phone3.png")}
               style={{
                 height: 36,
                 width: 36,
@@ -221,7 +221,7 @@ const closeModal = () => {
             }}
           >
             <Image
-              source={require("../assets/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13-removebg-preview.png")}
+              source={require("../assets/google.png")}
               style={{
                 height: 36,
                 width: 36,

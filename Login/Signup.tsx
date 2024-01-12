@@ -153,7 +153,7 @@ const Signup = ({ navigation }) => {
                             {
                                                                     isPasswordShown == true ? (
                                                                         <Image
-                                                                                            source={require('../assets/48980-200.png')} // Update with the path to your eye-off image
+                                                                                            source={require('../assets/R-eye.png')} // Update with the path to your eye-off image
                                                                                             style={{
                                                                                                 height: 24,
                                                                                                 width: 24,
@@ -162,7 +162,7 @@ const Signup = ({ navigation }) => {
                                                                                         />
                                                                     ) : (
                                                                         <Image
-                                                                                            source={require('../assets/1339644-200-removebg-preview.png')} // Update with the path to your eye-off image
+                                                                                            source={require('../assets/Leye.png')} // Update with the path to your eye-off image
                                                                                             style={{
                                                                                                 height: 24,
                                                                                                 width: 24,
@@ -239,7 +239,7 @@ const Signup = ({ navigation }) => {
                         }}
                     >
                         <Image
-                            source={require("../assets/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13-removebg-preview.png")}
+                            source={require("../assets/google.png")}
                             style={{
                                 height: 36,
                                 width: 36,
@@ -266,7 +266,7 @@ const Signup = ({ navigation }) => {
                         }}
                     >
                         <Image
-                            source={require("../assets/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13-removebg-preview.png")}
+                            source={require("../assets/google.png")}
                             style={{
                                 height: 36,
                                 width: 36,

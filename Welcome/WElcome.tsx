@@ -61,7 +61,7 @@ const modalRef = useRef();
             <View style={{ flex: 1 }}>
                 <View>
                     <Image
-                        source={require("../assets/09eccaf4e2b707127ffffa950b4c8e88-removebg-preview.png")}
+                        source={require("../assets/MDoc.png")}
                         style={{
                             height: 300,
                             width: 300,
@@ -77,7 +77,7 @@ const modalRef = useRef();
                     />
 
                     <Image
-                        source={require("../assets/f25cc7e38c4f0b140a2885c7190e75cd-removebg-preview.png")}
+                        source={require("../assets/Phone3.png")}
                         style={{
                             height: 200,
                             width: 200,
@@ -94,7 +94,7 @@ const modalRef = useRef();
                     />
 
                     <Image
-                        source={require("../assets/efa2cf467e5daf25376cefb5f4a7b039-removebg-preview.png")}
+                        source={require("../assets/Phone2.png")}
                         style={{
                             width: 150,
                             height: 150,
@@ -111,7 +111,7 @@ const modalRef = useRef();
                     />
 
                     <Image
-                        source={require("../assets/7c3b2108b4e879150933bf612879937e-removebg-preview.png")}
+                        source={require("../assets/Fdoc.png")}
                         style={{
                             height: 300,
                             width: 300,
